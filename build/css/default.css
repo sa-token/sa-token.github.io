@@ -5,7 +5,31 @@ html {
 body {
   font-size: 1.6rem;
   color: #000;
+
+  background-image: url("../images/foguete.png");
+  background-repeat: no-repeat;
+  background-position: 5% 20%;
 }
+
+
+.back {
+    width: 200px;
+    height: 200px;
+    display: block;
+    position: relative;
+}
+
+.back::after {
+    content: "";
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+
 
 header {
   border-bottom: 0.2rem solid #000;
@@ -157,11 +181,10 @@ article .header {
     padding: 37px 28px;
 }
 
-
-.button:hover {
-    font: bold 23px Arial;
+.button:hover
+{
+    color: #555555;
 }
-
 .group {
     margin: 70px;
 }

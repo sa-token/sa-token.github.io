@@ -55,7 +55,6 @@ main = hakyll $ do
         route idRoute
         compile $ do
             posts <- recentFirst =<< loadAll "posts/*"
-            coins <- recentFirst =<< loadAll "coins/*"
             let indexCtx =
                     listField "posts" postCtx (return posts) `mappend`
                     defaultContext
